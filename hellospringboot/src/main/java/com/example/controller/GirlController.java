@@ -74,10 +74,20 @@ public class GirlController {
     public void girlDelete(@PathVariable("id") Integer id){
         girlRepository.delete(id);
     }
+
+    /**
+     * 通过年龄查询
+     * @param age
+     * @return
+     */
     @GetMapping(value="/girls/age/{age}")
     public List<Girl> girlsByAge(@PathVariable("age") Integer age){
         return girlRepository.findByAge(age);
     }
+
+    /**
+     * 插入两行数据
+     */
     @PostMapping(value = "/girls/two")
     public void insertTwoGirls(){
         girlService.insertTwo();

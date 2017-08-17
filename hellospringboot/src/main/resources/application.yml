@@ -1,13 +1,22 @@
 spring:
   profiles:
     active: dev
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/dbgirl
+#    username: kyee
+#    password: kyeepass
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/dbgirl
-    username: kyee
-    password: kyeepass
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@//192.168.10.111:1521/orcl
+        username: kyeecis
+        password: Kyeecis_6082
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    show-sql: true
 
-  jpa:
-    hibernate:
-      ddl-auto: none
-    show-sql: true
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.domain

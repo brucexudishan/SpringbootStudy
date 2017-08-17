@@ -37,4 +37,13 @@ public class GirlService {
             throw new Exception("你还在上初中");
         }
     }
+
+    /**
+     * 通过ID 查询
+     * @param id
+     * @return
+     */
+    public Girl findOne(Integer id){
+        return girlRepository.findOne(id);
+    }
 }
