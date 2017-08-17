@@ -1,11 +1,11 @@
 package com.kyee.restfuldemo.Controller;
 
-import com.kyee.restfuldemo.Entity.UserDemo;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.kyee.restfuldemo.Entity.db1.UserDemo;
 import com.kyee.restfuldemo.Service.UserDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +40,18 @@ public class UserDemoController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<UserDemo> getAllUserDemo(){
         List<UserDemo> userDemos = userDemoService.findAllUserDemo();
+        return userDemos;
+    }
+
+    @RequestMapping(value = "/{pageNum}/{pageSize}", method = RequestMethod.GET)
+    public List<UserDemo> getPGAllUserDemo(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize){
+        PageHelper.startPage(pageNum, pageSize);
+
+        List<UserDemo> userDemos = userDemoService.findAllUserDemo();
+
+        //页码相关信息
+//        PageInfo<UserDemo> pageInfo = new PageInfo<>(userDemos);
+
         return userDemos;
     }
     //@PostMapping(value = "/")

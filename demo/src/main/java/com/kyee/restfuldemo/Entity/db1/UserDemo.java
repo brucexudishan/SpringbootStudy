@@ -1,4 +1,4 @@
-package com.kyee.restfuldemo.Entity;
+package com.kyee.restfuldemo.Entity.db1;
 
 /**
  * Created by mork on 2017/8/15.

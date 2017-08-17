@@ -1,6 +1,6 @@
 package com.kyee.restfuldemo.Controller;
 
-import com.kyee.restfuldemo.Entity.Account;
+import com.kyee.restfuldemo.Entity.db2.Account;
 import com.kyee.restfuldemo.Service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

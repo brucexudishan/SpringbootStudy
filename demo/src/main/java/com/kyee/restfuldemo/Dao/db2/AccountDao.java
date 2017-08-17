@@ -1,8 +1,6 @@
 package com.kyee.restfuldemo.Dao.db2;
 
-import com.kyee.restfuldemo.Entity.Account;
-import com.kyee.restfuldemo.Entity.UserDemo;
-import org.apache.ibatis.annotations.Param;
+import com.kyee.restfuldemo.Entity.db2.Account;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,9 +12,6 @@ import java.util.List;
 @Repository
 public interface AccountDao {
 
-
-
     List<Account> getAllAccount();
-;
 
 }

@@ -1,13 +1,11 @@
 package com.kyee.restfuldemo.Service.Impl;
 
-import com.kyee.restfuldemo.Dao.db1.UserDemoDao;
 import com.kyee.restfuldemo.Dao.db2.AccountDao;
-import com.kyee.restfuldemo.Entity.Account;
+import com.kyee.restfuldemo.Entity.db2.Account;
 import com.kyee.restfuldemo.Service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.websocket.server.ServerEndpoint;
 import java.util.List;
 
 /**

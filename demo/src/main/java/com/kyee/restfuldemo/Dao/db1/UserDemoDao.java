@@ -1,7 +1,6 @@
 package com.kyee.restfuldemo.Dao.db1;
 
-import com.kyee.restfuldemo.Entity.UserDemo;
-import org.apache.ibatis.annotations.*;
+import com.kyee.restfuldemo.Entity.db1.UserDemo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

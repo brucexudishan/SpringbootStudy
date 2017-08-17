@@ -1,7 +1,7 @@
 package com.kyee.restfuldemo.Service.Impl;
 
 import com.kyee.restfuldemo.Dao.db1.UserDemoDao;
-import com.kyee.restfuldemo.Entity.UserDemo;
+import com.kyee.restfuldemo.Entity.db1.UserDemo;
 import com.kyee.restfuldemo.Service.UserDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,13 +35,11 @@ public class UserDemoServiceImpl implements UserDemoService{
     @Override
     public void addUserDemo(UserDemo userDemo) {
         userDemoDao.insert(userDemo);
-
     }
 
     @Override
     public void updateUserDemo(UserDemo userDemo) {
         userDemoDao.update(userDemo);
-
     }
 
     @Override

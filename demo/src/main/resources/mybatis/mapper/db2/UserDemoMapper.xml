@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.kyee.restfuldemo.Dao.db2.AccountDao" >
-    <resultMap id="UserDemoMap" type="com.kyee.restfuldemo.Entity.Account" >
+    <resultMap id="UserDemoMap" type="com.kyee.restfuldemo.Entity.db2.Account" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="userName" property="userName" jdbcType="VARCHAR" />
         <result column="money" property="money" jdbcType="INTEGER" />

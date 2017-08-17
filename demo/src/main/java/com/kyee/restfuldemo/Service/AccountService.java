@@ -1,6 +1,6 @@
 package com.kyee.restfuldemo.Service;
 
-import com.kyee.restfuldemo.Entity.Account;
+import com.kyee.restfuldemo.Entity.db2.Account;
 
 import java.util.List;
 

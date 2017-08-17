@@ -1,6 +1,6 @@
 package com.kyee.restfuldemo.Service;
 
-import com.kyee.restfuldemo.Entity.UserDemo;
+import com.kyee.restfuldemo.Entity.db1.UserDemo;
 
 import java.util.List;
 
@@ -13,7 +13,4 @@ public interface UserDemoService {
     void addUserDemo(UserDemo userDemo);
     void updateUserDemo(UserDemo userDemo);
     void deleteUserDemo(UserDemo userDemo);
-
-
-
 }
