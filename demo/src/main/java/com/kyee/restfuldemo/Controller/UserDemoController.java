@@ -23,11 +23,14 @@ public class UserDemoController {
 
 //也可以这么写
 //    @RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-//    public HttpEntity getUserDemoByUserId(@PathVariable("userId") Integer userId){
+//    public HttpEntity getOne(@PathVariable("userId") Integer userId){
 //        UserDemo userDemo = userDemoService.findUserDemoById(userId);
 //        return new ResponseEntity(userDemo, HttpStatus.OK);
 //    }
+    //还可以使用?userId=xxx
+    //用@RequestParam注解来取到
 
+    //@GetMapping(value = "/{userId}")
     @RequestMapping(value = "/{userId}", method = RequestMethod.GET)
     public UserDemo getUserDemoByUserId(@PathVariable("userId") Integer userId){
         UserDemo userDemo = userDemoService.findUserDemoById(userId);
@@ -39,7 +42,7 @@ public class UserDemoController {
         List<UserDemo> userDemos = userDemoService.findAllUserDemo();
         return userDemos;
     }
-
+    //@PostMapping(value = "/")
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public void addUser(@RequestBody UserDemo userDemo) {
         userDemoService.addUserDemo(userDemo);
@@ -54,6 +57,7 @@ public class UserDemoController {
     public void deleteUser(@RequestBody UserDemo userDemo){
         userDemoService.deleteUserDemo(userDemo);
     }
+
 
 
 }

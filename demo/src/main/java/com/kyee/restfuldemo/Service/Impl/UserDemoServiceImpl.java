@@ -1,6 +1,6 @@
 package com.kyee.restfuldemo.Service.Impl;
 
-import com.kyee.restfuldemo.Dao.UserDemoDao;
+import com.kyee.restfuldemo.Dao.db1.UserDemoDao;
 import com.kyee.restfuldemo.Entity.UserDemo;
 import com.kyee.restfuldemo.Service.UserDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ import java.util.List;
 @Service("userDemoService")
 public class UserDemoServiceImpl implements UserDemoService{
 
-
     private final UserDemoDao userDemoDao;
 
     @Autowired
@@ -25,29 +24,29 @@ public class UserDemoServiceImpl implements UserDemoService{
 
     @Override
     public UserDemo findUserDemoById(int userId) {
-        return userDemoDao.getUserDemoByUserId(userId);
+        return userDemoDao.getOne(userId);
     }
 
     @Override
     public List<UserDemo> findAllUserDemo() {
-        return userDemoDao.getAllUserDemo();
+        return userDemoDao.getAll();
     }
 
     @Override
     public void addUserDemo(UserDemo userDemo) {
-        userDemoDao.insertUserDemo(userDemo);
+        userDemoDao.insert(userDemo);
 
     }
 
     @Override
     public void updateUserDemo(UserDemo userDemo) {
-        userDemoDao.updateUserDemo(userDemo);
+        userDemoDao.update(userDemo);
 
     }
 
     @Override
     public void deleteUserDemo(UserDemo userDemo) {
-        userDemoDao.deleteUserDemo(userDemo);
+        userDemoDao.delete(userDemo);
     }
 
 
